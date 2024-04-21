@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Blue"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtHeaderTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:paddingTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/txtSelectCrop"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txtSelectCrop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="40dp"
+        android:text="@string/selectCrop"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtHeaderTitle"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/imgBtnRice"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/rice"
+        android:scaleType="fitCenter"
+        android:background="@color/Grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSelectCrop"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/imgBtnCorn"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitCenter"
+        android:background="@color/Grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgBtnRice"
+        app:layout_constraintTop_toBottomOf="@+id/txtSelectCrop"
+        android:src="@drawable/corn" />
+
+    <ImageButton
+        android:id="@+id/imgBtnSugarCane"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:scaleType="fitCenter"
+        android:background="@color/Grey"
+        android:src="@drawable/sugarcane"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBtnRice"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/inputLandArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:hint="Input Land Area..."
+        app:layout_constraintTop_toBottomOf="@+id/imgBtnSugarCane" />
+
+    <Button
+        android:id="@+id/btnHectare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Grey"
+        android:text="Hectare"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginTop="20dp"
+        app:backgroundTint="@null"
+        app:layout_constraintTop_toBottomOf="@+id/inputLandArea"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnSquareMeter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/Grey"
+        android:text="Square Meter"
+        app:backgroundTint="@null"
+        app:layout_constraintTop_toBottomOf="@+id/btnHectare"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/DarkGrey"
+        android:text="Next"
+        app:backgroundTint="@null"
+        app:layout_constraintTop_toBottomOf="@+id/btnSquareMeter"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

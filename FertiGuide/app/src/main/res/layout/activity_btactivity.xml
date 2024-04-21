@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Blue"
+    tools:context=".BTActivity">
+
+    <TextView
+        android:id="@+id/txtCropAndAreaFromMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/cropAndAreaFromMain"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:paddingTop="20dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnPairedDevices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/btnBluetooth"
+        android:background="@color/DarkGrey"
+        app:backgroundTint="@null"
+        app:layout_constraintTop_toBottomOf="@+id/txtCropAndAreaFromMain"
+        app:layout_constraintBottom_toTopOf="@+id/listOfPairedDevices"/>
+
+    <ListView
+        android:id="@+id/listOfPairedDevices"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtDataLabel"
+        app:layout_constraintTop_toBottomOf="@+id/btnPairedDevices"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txtDataLabel"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="@string/receivedData"
+        android:textColor="@color/white"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtReceivedData"
+        app:layout_constraintTop_toBottomOf="@+id/listOfPairedDevices" />
+
+    <TextView
+        android:id="@+id/txtReceivedData"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/txtDataLabel"
+        app:layout_constraintBottom_toTopOf="@+id/btnComputeFertilizer" />
+
+    <Button
+        android:id="@+id/btnComputeFertilizer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/DarkGrey"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/compute_fertilizer"
+        app:backgroundTint="@null"
+        app:layout_constraintTop_toBottomOf="@+id/txtReceivedData"
+        app:layout_constraintBottom_toTopOf="@+id/btnReScan"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="40dp" />
+
+    <Button
+        android:id="@+id/btnReScan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/rescan"
+        android:background="@color/Grey"
+        app:backgroundTint="@null"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/btnComputeFertilizer"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

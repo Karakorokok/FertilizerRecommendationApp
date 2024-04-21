@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">FertiGuide</string>
+
+    <!-- MainActivity -->
+    <string name="selectCrop">Select Crop</string>
+
+    <string name="rice">Rice</string>
+    <string name="corn">Corn</string>
+    <string name="sugarcane">Sugar Cane</string>
+
+    <!-- BTActivity -->
+    <string name="cropAndAreaFromMain">Crop: \nLand Area: </string>
+    <string name="btnBluetooth">Connect Bluetooth Module</string>
+    <string name="receivedData">Received Data:</string>
+    <string name="rescan">ReScan</string>
+    <string name="compute_fertilizer">Compute Fertilizer</string>
+
+    <!-- LogsActivity -->
+
+
+</resources>
